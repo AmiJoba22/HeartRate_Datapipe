@@ -1,4 +1,4 @@
-from statistical import average, median, range
+from statistical import average, median, range, variance, standard_dev
 from data_cleaning import clean_heartrate_data
 
 # def clean_heartrate_data(data: list) -> tuple:
@@ -111,6 +111,8 @@ def run(file: str):
     heart_rate_data_avg = average(cleaned_list) 
     heart_rate_data_med = median(cleaned_list) 
     heart_rate_date_range = range(cleaned_list)
+    heart_rate_data_vari = variance(cleaned_list)
+    heart_rate_data_std = standard_dev(cleaned_list)
     # pretty much calculated them in functions themselves
     
     
@@ -118,6 +120,8 @@ def run(file: str):
     print(f"avg = {float(heart_rate_data_avg)}")
     print(f" median = {float(heart_rate_data_med)}") # just making sure they print as float 
     print(f" range = {float(heart_rate_date_range)}")
+    print(f"variance = {float(heart_rate_data_vari)}")
+    print(f" std = {float(heart_rate_data_std)}")
 
     # print out your descriptive statistics to the console
     
@@ -146,7 +150,8 @@ sorted data for median = 54, 54, 54, 55, 55, 55, 55, 56, 56, 56, 56, 57, 57, 58,
 avg = 64.58730158730158
  median = 62.0
  range = 39.0
-
+variance = 73.95596518177163
+ std = 8.531240295088233
  
 2. phase1.txt
 CLEANED LIST =(69, 57, 56, 84, 100, 83, 89, 75, 89, 90, 96, 89, 86, 86, 85, 86, 75, 88, 92, 66, 100, 89, 98, 90, 74, 88, 94, 89, 93, 83, 86, 84, 84, 91, 83, 84, 93, 91, 93, 91, 85, 102, 88, 89, 90, 90, 84, 87, 85, 110, 87, 96, 106, 96)
@@ -159,6 +164,8 @@ sorted data for median = [56, 57, 66, 69, 74, 75, 75, 83, 83, 83, 84, 84, 84, 84
 avg = 87.29629629629629
  median = 88.5
  range = 54.0
+ variance = 99.94828791055207
+ std = 9.90441283923415
 
 3.phase2.txt
 
@@ -171,6 +178,8 @@ sorted data for median = [54, 58, 62, 68, 68, 68, 69, 69, 69, 71, 72, 73, 74, 75
 avg = 85.18333333333334
  median = 85.0
  range = 63.0
+variance = 182.0505649717514
+ std = 13.37970062777523
 
 4. phase3.txt
 CLEANED LIST =(69, 51, 56, 53, 56, 54, 57, 57, 64, 60, 58, 57, 56, 56, 55, 54, 55, 53, 52, 55, 97, 67, 58, 57, 54, 56, 53, 52, 59, 76, 66, 62, 62, 62, 52, 53, 50, 51, 50, 52, 52, 51, 80, 73, 95, 88, 67, 62, 64, 61, 57, 60, 56, 55, 54, 53, 53, 54, 52, 53, 52, 51, 51, 56, 54, 59, 56, 79, 74, 70, 65, 58, 57, 54, 54, 54, 54, 65, 99, 91, 66, 85, 63, 64, 61, 67)
@@ -183,5 +192,6 @@ sorted data for median = [50, 50, 51, 51, 51, 51, 51, 52, 52, 52, 52, 52, 52, 52
 avg = 60.651162790697676
  median = 56.5
  range = 49.0
-
+variance = 122.44158686730506
+ std = 11.000811219411371
 '''

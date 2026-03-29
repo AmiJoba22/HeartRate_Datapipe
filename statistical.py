@@ -1,3 +1,7 @@
+
+import statistics as stats 
+import numpy
+
 def average(data: list) -> float:
     """
     Calculate average of a list of integers using a for-loop. Assumes data is clean.
@@ -8,10 +12,17 @@ def average(data: list) -> float:
     count = 0 # assigning a variable to count numbers in the list, starting from first index
 
     for item in data:
-        data_sum += item # searched this logic up, my understanding of this is that the loop adds every number creating a sum and data sum is finalized once the final number is added. 
+        data_sum += item # searched this logic up, my understanding of this is that the loop adds # every number creating a sum and data sum is finalized once the final number is added. 
         count += 1 # as more numbers continue to be added the amount of numbers go up by one.
     return data_sum / count # returns the calculation of the avg
+    
+    # Stats
+    # for item in data:
+    #     average = stats.mean(data)
+    # return average
 
+        
+    
 
 
 def median(data: list) -> float:
@@ -29,6 +40,7 @@ def median(data: list) -> float:
         mid2 = sorted_data[data_length // 2] # get second middle number 
         heart_rate_data_med = (mid1 + mid2) / 2 # find avg of both middle numbers to get median 
     print(f"sorted data for median = {sorted_data}") #for me to visually see sorted data 
+
     
     return heart_rate_data_med #return variable for median
 
@@ -46,9 +58,21 @@ def range(data: list) -> float:
         if item > max_value: # if current item being checked is greater than max
             max_value = item # considered max at the time till loop ends and max is finalized
     return max_value - min_value # calculate range 
+    
 
 def rolling_avg(data: list, k: int) -> float:
     """
     CHALLENGE FUNCTION (Optional)
     """
     pass
+
+
+def variance(data: list) -> float:
+    variance = stats.variance(data)
+    return variance
+
+
+
+def standard_dev(data:list) -> float:
+    standard_dev = numpy.std(data)
+    return standard_dev
