@@ -5,7 +5,7 @@
 
 Your company has provided you a folder named "data/", which contains 4 files of heart-rate samples from one 30 year old participant. The participants device records heart rate every 5 minutes. Your task is to write a Python program that:
 
-## Instructions
+## Instructions (Part 1)
 
 There are two Python files which you will modify in this repository to complete this project:
 * [main.py](main.py)
@@ -31,3 +31,17 @@ This module contains the following functions:
 * `range`
 * `rolling_avg` (Challenge function)
 * `run`
+
+## Instructions (Part 2)
+
+First, you will modularize your pipeline by separating related functionality into different files. For example, data cleaning and statistical calculations. This reinforces how functions support separation of responsibilities and how modules enable more scalable, readable systems.
+* [data_cleaning.py](data_cleaning.py)
+* [statistical.py](statistical.py)
+
+You will also push your project to GitHub, practicing basic version control workflows. This includes organizing your files, committing changes, and publishing your code. This step reflects how engineers share, track, and collaborate on code in professional environments.
+
+You will extend your initial pipeline to reflect how data engineering systems are structured and shared in real-world environments. Your focus will shift from writing a single script to organizing, maintaining, and distributing your code using GitHub and Python modules.
+
+As you will be iterating on your initial project we will not be providing a folder to download for this part of your project. Instead you will continue working on your submitted code in the folder titled "hr_data_pipeline."
+
+You will also push your project to GitHub, practicing basic version control workflows. This includes organizing your files, committing changes, and publishing your code. This step reflects how engineers share, track, and collaborate on code in professional environments.
